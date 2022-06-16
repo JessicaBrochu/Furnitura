@@ -2,7 +2,11 @@
     <div class="furnitures">
         <div v-for="furniture in furnitures" :key="furniture.id">
             <!-- <h3>{{furniture.name}}</h3> -->
-            <Furniture @remove-furniture="$emit('remove-furniture', furniture.id)" :furniture="furniture"/>
+            <Furniture 
+                @remove-furniture="$emit('remove-furniture', furniture.id)" 
+                @add-favorite="$emit('add-favorite', furniture.id)" 
+                :furniture="furniture"
+            />
         </div>
     </div>
 </template>
@@ -15,7 +19,7 @@ import Furniture from "./Furniture"
             furnitures: Array,
         },
         components: { Furniture },
-        emits: ["remove-furniture"]
+        emits: ["remove-furniture", "add-favorite"]
     };
 </script>
 

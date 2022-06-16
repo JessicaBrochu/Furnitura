@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="home"></div> -->
   <AddFurniture />
-  <Furnitures @remove-furniture="removeFurniture" :furnitures="furnitures" />
+  <Furnitures @remove-furniture="removeFurniture" @add-favorite="addFavorite" :furnitures="furnitures" />
 </template>
 
 <script>
@@ -16,7 +16,12 @@ export default {
       if (confirm("Are you sure you want to remove this furniture?")) {
         this.furnitures = this.furnitures.filter((furniture) => furniture.id !== id)
       }
-    }
+    },
+    addFavorite(id){
+      this.furnitures = this.furnitures.map((furniture) => 
+      furniture.id === id ? {...furniture, isFavorite: !furniture.isFavorite} : furniture
+      );
+    },
   },
   data() {
     return {

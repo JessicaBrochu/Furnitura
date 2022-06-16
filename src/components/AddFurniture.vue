@@ -28,14 +28,12 @@ export default {
       name: "",
       price: "",
       url: "",
-      isFavorite: false,
     };
   },
   methods: {
     onSubmit(e) {
       e.preventDefault();
       const newFurniture = {
-        id: Math.random(),
         name: this.name,
         price: this.price,
         url: this.url,

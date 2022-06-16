@@ -20,7 +20,11 @@ export default {
   },
   data() {
     return {
-      furnitures: [
+      furnitures: [],
+    };
+  },
+  created(){
+    this.furnitures = [
         {
           id: 1,
           name: "Timber Charme Tan Sofa",
@@ -42,8 +46,7 @@ export default {
           img: "https://images.unsplash.com/photo-1540809799-5da9372c3f64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=724&q=80",
           isFavorite: true
         },
-      ]
-    }
+    ]
   }
-}
+};
 </script>

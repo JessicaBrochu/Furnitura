@@ -19,6 +19,7 @@
                     class="p-button-danger" 
                 />
                 <Button 
+                    @click="$emit('add-favorite', furniture.id)"
                     icon="pi pi-heart" 
                     :class="[
                     furniture.isFavorite ? '' : 'p-button-outlined',

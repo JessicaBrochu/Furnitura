@@ -13,8 +13,14 @@
             </template>
             <template #footer>
                 <Button icon="pi pi-times" label="Remove" class="p-button-danger" />
-                <Button icon="pi pi-heart" class="p-button-rounded p-button-danger" />
-                <!-- <Button icon="pi pi-heart" class="p-button-rounded p-button-danger p-button-outlined" /> -->
+                <Button 
+                    icon="pi pi-heart" 
+                    :class="[
+                    furniture.isFavorite ? '' : 'p-button-outlined',
+                    'p-button-rounded',
+                    'p-button-danger'
+                    ]"
+                />
             </template>
         </Card>
     </div>

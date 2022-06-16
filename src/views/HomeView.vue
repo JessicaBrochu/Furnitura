@@ -1,7 +1,7 @@
 <template>
   <!-- <div class="home"></div> -->
   <AddFurniture />
-  <Furnitures v-bind:furnitures="furnitures" />
+  <Furnitures @remove-furniture="removeFurniture" :furnitures="furnitures" />
 </template>
 
 <script>
@@ -11,6 +11,13 @@ import AddFurniture from "../components/AddFurniture"
 export default {
   name: 'HomeView',
   components: { AddFurniture, Furnitures },
+  methods: {
+    removeFurniture(id) {
+      if (confirm("Are you sure you want to remove this furniture?")) {
+        this.furnitures = this.furnitures.filter((furniture) => furniture.id !== id)
+      }
+    }
+  },
   data() {
     return {
       furnitures: [

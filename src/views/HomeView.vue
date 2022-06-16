@@ -26,6 +26,13 @@ export default {
           img: "https://images.unsplash.com/photo-1540809799-5da9372c3f64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=724&q=80",
           isFavorite: true
         },
+        {
+          id: 3,
+          name: "Seno Walnut Dining Table",
+          price: "400$",
+          img: "https://images.unsplash.com/photo-1540809799-5da9372c3f64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=724&q=80",
+          isFavorite: true
+        },
       ]
     }
   }

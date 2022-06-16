@@ -19,6 +19,10 @@ import Furniture from "./Furniture"
 </script>
 
 <style>
-
-
+.furnitures{
+    padding-top: 100px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+}
 </style>

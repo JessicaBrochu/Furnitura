@@ -1,9 +1,9 @@
 <template>
     <div class="furniture">
         <!-- <h3>{{furniture.name}}</h3> -->
-                <Card style="width: 25em">
+                <Card>
             <template #header>
-                <img src="https://www.primefaces.org/wp-content/uploads/2020/02/primefacesorg-primevue-2020.png" style="height: 15rem" />
+                <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
             </template>
             <template #title>
                 {{furniture.name}}
@@ -12,9 +12,9 @@
                 {{furniture.price}}
             </template>
             <template #footer>
-                <Button icon="pi pi-times" label="Remove" class="p-button-danger" style="margin-right: 11.1em" />
+                <Button icon="pi pi-times" label="Remove" class="p-button-danger" />
                 <Button icon="pi pi-heart" class="p-button-rounded p-button-danger" />
-                <Button icon="pi pi-heart" class="p-button-rounded p-button-danger p-button-outlined" />
+                <!-- <Button icon="pi pi-heart" class="p-button-rounded p-button-danger p-button-outlined" /> -->
             </template>
         </Card>
     </div>
@@ -50,5 +50,7 @@
 }
 .p-card-footer{
     padding-top: 24px !important;
+    display: flex;
+    justify-content: space-between;
 }
 </style>

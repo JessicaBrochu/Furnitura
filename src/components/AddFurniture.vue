@@ -5,7 +5,6 @@
         <div class="p-field">
             <label for="name" class="p-sr-only">Name</label>
             <InputText v-model="name" id="name" type="text" placeholder="Name" />
-            <!-- {{ this.name }} -->
         </div>
         <div class="p-field">
             <label for="price" class="p-sr-only">Price</label>
@@ -23,28 +22,28 @@
 
 <script>
 export default {
-  name: "AddPet",
+  name: "AddFurniture",
   data() {
     return {
       name: "",
-      age: "",
+      price: "",
       url: "",
+      isFavorite: false,
     };
   },
   methods: {
     onSubmit(e) {
       e.preventDefault();
-      const newPet = {
-        // id: Math.random(),
+      const newFurniture = {
+        id: Math.random(),
         name: this.name,
-        age: this.age,
+        price: this.price,
         url: this.url,
         isFavorite: false,
       };
-      //   console.log("new pet", newPet);
-      this.$emit("add-pet", newPet);
+      this.$emit("add-furniture", newFurniture);
       this.name = "";
-      this.age = "";
+      this.price = "";
       this.url = "";
     },
   },

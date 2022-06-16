@@ -3,7 +3,7 @@
         <!-- <h3>{{furniture.name}}</h3> -->
                 <Card>
             <template #header>
-                <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" />
+                <img :src="furniture.url" alt="Furniture" />
             </template>
             <template #title>
                 {{furniture.name}}
@@ -47,6 +47,10 @@
 </script>
 
 <style>
+.p-component img{
+    height: 300px;
+    object-fit: cover;
+}
 .p-card-title{
     font-family: 'Inter', sans-serif;
     font-size: 16px !important;

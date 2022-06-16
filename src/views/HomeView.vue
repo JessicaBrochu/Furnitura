@@ -1,14 +1,16 @@
 <template>
-  <div class="home"></div>
+  <!-- <div class="home"></div> -->
+  <AddFurniture />
   <Furnitures v-bind:furnitures="furnitures" />
 </template>
 
 <script>
 import Furnitures from "../components/Furnitures"
+import AddFurniture from "../components/AddFurniture"
 
 export default {
   name: 'HomeView',
-  components: { Furnitures },
+  components: { AddFurniture, Furnitures },
   data() {
     return {
       furnitures: [

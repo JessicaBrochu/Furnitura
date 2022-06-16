@@ -12,7 +12,12 @@
                 {{furniture.price}}
             </template>
             <template #footer>
-                <Button icon="pi pi-times" label="Remove" class="p-button-danger" />
+                <Button 
+                    @click="onRemove(furniture.id)"
+                    icon="pi pi-times" 
+                    label="Remove" 
+                    class="p-button-danger" 
+                />
                 <Button 
                     icon="pi pi-heart" 
                     :class="[
@@ -32,6 +37,11 @@
             furniture: Object
         },
         components: {},
+        methods: {
+            onRemove(id) {
+                this.$emit("remove-furniture", id);
+            },
+        },
     }
 </script>
 
